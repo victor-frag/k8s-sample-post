@@ -4,7 +4,7 @@
 # nameOverride: post
 replicaCount: 1
 image:
-  repository: dockerhub/post
+  repository: victorfrag/k8s-sample-post
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -17,9 +17,6 @@ service:
   type: ClusterIP
   externalPort: 5000
   internalPort: 5000
-
-nodeSelector:
-  cloud.google.com/gke-nodepool: default-pool
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
